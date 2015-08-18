@@ -44,6 +44,13 @@
 
 (set-face-attribute 'default nil :height 150)
 
+; ------------------------
+; member-functions (C++)
+; ------------------------
+(require 'member-function)
+(setq mf--source-file-extension "cpp")
+
+
 ; --------------
 ; color-theme
 ; --------------
