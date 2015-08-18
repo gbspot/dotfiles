@@ -13,3 +13,6 @@
 [submodule ".emacs.d/dash.el"]
 	path = .emacs.d/dash.el
 	url = https://github.com/magnars/dash.el.git
+[submodule ".emacs.d/yasnippet"]
+	path = .emacs.d/yasnippet
+	url = https://github.com/capitaomorte/yasnippet.git
