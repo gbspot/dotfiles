@@ -4,6 +4,18 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
+;-----------
+; editing
+;-----------
+
+; No tabs, spaces only
+(setq-default indent-tabs-mode nil)
+
+
+(setq tab-width 2)
+(setq c-basic-offset 2)
+(setq sh-basic-offset 2)
+
 ; ----------------
 ; auto-complete
 ;-----------------
@@ -13,8 +25,6 @@
 
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
-
-
 
 (setq x-alt-keysm 'meta)
 
