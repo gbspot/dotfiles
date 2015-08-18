@@ -1,0 +1,3 @@
+[submodule ".emacs.d/magit"]
+	path = .emacs.d/magit
+	url = https://github.com/magit/magit.git
