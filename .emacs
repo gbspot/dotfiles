@@ -3,6 +3,7 @@
 
 
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;-----------
 ; editing
@@ -30,8 +31,14 @@
 
 (set-face-attribute 'default nil :height 150)
 
+; --------------
+; color-theme
+; --------------
+; Not bundled on emacs for mac
+(add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-midnight)
+
 
 (tool-bar-mode -1)
