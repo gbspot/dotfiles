@@ -1,3 +1,12 @@
 [submodule ".emacs.d/magit"]
 	path = .emacs.d/magit
 	url = https://github.com/magit/magit.git
+[submodule ".emacs.d/auto-complete"]
+	path = .emacs.d/auto-complete
+	url = https://github.com/auto-complete/auto-complete
+[submodule ".emacs.d/popup-el"]
+	path = .emacs.d/popup-el
+	url = https://github.com/auto-complete/popup-el
+[submodule ".emacs.d/fuzzy-el"]
+	path = .emacs.d/fuzzy-el
+	url = https://github.com/auto-complete/fuzzy-el
