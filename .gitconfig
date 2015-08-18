@@ -1,0 +1,60 @@
+# This is my default user
+[user]
+  name = Guy Blucher
+  email = Guy.Blucher@gmail.com
+
+[alias]
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --stat
+  lp = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate -p
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  lk = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --graph
+
+  logs = !git ll
+  logp = !git lp
+  logk = log --graph
+
+  cp = cherry-pick
+  st = status -s
+  cl = clone
+  ci = commit
+  co = checkout
+  cob = checkout -b
+  br = branch
+  diff = diff --word-diff
+  dc = diff --cached
+
+  # Add the staged files to the previous commit
+  commita = commit --amend -C HEAD
+
+  # Undo the last commit, and leave the files as if they weren't ever
+  # committed
+  undo = reset --mixed HEAD~1
+
+  # Undo the last commit, but leave the files from the previous commit
+  # staged
+  undos = reset --soft HEAD~1
+
+  # From: https://gist.github.com/robmiller/6018582#file-gitconfig
+  #
+  # Working with branches
+  #
+  # Get the current branch name (not so useful in itself, but used in
+  # other aliases)
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+  # Push the current branch to the remote "origin", and set it to
+  # track the upstream branch
+  publish = "!git push -u origin $(git branch-name)"
+  # Delete the remote version of the current branch
+  unpublish = "!git push origin :$(git branch-name)"
+
+  # Working with files
+  #
+  # Show changes that have been staged
+  diffc = diff --cached
+
+
+# Include site defaults to override these
+[include]
+  # Place site defaults (like company username/email)
+  path = ~/.gitconfig.local
