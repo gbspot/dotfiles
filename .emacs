@@ -38,5 +38,13 @@
 (color-theme-initialize)
 (color-theme-midnight)
 
+; --------
+; magit
+; --------
+(add-to-list 'load-path "~/.emacs.d/dash.el")
+(add-to-list 'load-path "~/.emacs.d/magit/lisp")
+(require 'magit)
+
+
 
 (tool-bar-mode -1)
