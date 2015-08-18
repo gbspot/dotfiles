@@ -1,8 +1,6 @@
 (custom-set-variables
  '(inhibit-startup-screen t))
 
-
-(add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;-----------
