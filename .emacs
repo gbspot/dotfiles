@@ -150,3 +150,23 @@
 (setq js2-basic-offset 2)
 (setq js2-use-font-lock-faces t)
 
+;; --------------------------
+;; jedi (Python completion)
+;; --------------------------
+;;
+;; Run M-x jedi:install-server RET to configure on first use
+;; (requires 'pip install virtualenv')
+;;
+(add-to-list 'load-path "~/.emacs.d/emacs-epc")
+(add-to-list 'load-path "~/.emacs.d/emacs-deferred")
+(add-to-list 'load-path "~/.emacs.d/emacs-ctable")
+(add-to-list 'load-path "~/.emacs.d/emacs-python-environment")
+(require 'python-environment)
+
+(require 'epc)
+(setq jedi:server-command '("~/.emacs.d/emacs-jedi/jediepcserver.py"))
+(add-to-list 'load-path "~/.emacs.d/emacs-jedi")
+(require 'jedi)
+(autoload 'jedi:setup "jedi" nil t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
