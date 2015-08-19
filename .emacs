@@ -3,14 +3,14 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
-; For homebrew packages on OSX
+;; For homebrew packages on OSX
 (add-to-list 'exec-path "/usr/local/bin")
 
-;-----------
-; editing
-;-----------
+;; ----------
+;; editing
+;; ----------
 
-; No tabs, spaces only
+;; No tabs, spaces only
 (setq-default indent-tabs-mode nil)
 
 
@@ -21,9 +21,9 @@
 (require 'ido)
 (ido-mode t)
 
-; ----------------
-; auto-complete
-;-----------------
+;; ----------------
+;; auto-complete
+;; ----------------
 (add-to-list 'load-path "~/.emacs.d/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
@@ -50,34 +50,34 @@
 
 (set-face-attribute 'default nil :height 150)
 
-; ------------------------
-; member-functions (C++)
-; ------------------------
+;; ------------------------
+;; member-functions (C++)
+;; ------------------------
 (require 'member-functions)
 (setq mf--source-file-extension "cpp")
 
 
-; --------------
-; color-theme
-; --------------
-; Not bundled on emacs for mac
+;; --------------
+;; color-theme
+;; --------------
+;; Not bundled on emacs for mac
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-midnight)
 
-; --------
-; magit
-; --------
+;; --------
+;; magit
+;; --------
 (global-set-key (kbd "C-x g") 'magit-status)
 (add-to-list 'load-path "~/.emacs.d/dash.el")
 (add-to-list 'load-path "~/.emacs.d/magit/lisp")
 (require 'magit)
 
 
-; ----------
-; spelling
-; ----------
+;; ----------
+;; spelling
+;; ----------
 (setenv "DICTIONARY" "en_GB")
 (setq ispell-program-name "aspell")
 (setq ispell-program-name "aspell")
