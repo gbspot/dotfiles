@@ -12,11 +12,11 @@
 
 ;; No tabs, spaces only
 (setq-default indent-tabs-mode nil)
-
-
 (setq tab-width 2)
 (setq c-basic-offset 2)
 (setq sh-basic-offset 2)
+
+(tool-bar-mode -1)
 
 (require 'ido)
 (ido-mode t)
@@ -131,7 +131,12 @@
 
 (global-set-key [(control x) (control r)] 'find-file-root)
 
+;; ---------------------------
+;; js2-mode (JavaScript-IDE)
+;; ---------------------------
+(add-to-list 'load-path "~/.emacs.d/js2-mode")
+(require 'js2-mode)
 
-(tool-bar-mode -1)
+
 
 
