@@ -47,7 +47,7 @@
 ; ------------------------
 ; member-functions (C++)
 ; ------------------------
-(require 'member-function)
+(require 'member-functions)
 (setq mf--source-file-extension "cpp")
 
 
