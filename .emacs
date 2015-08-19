@@ -24,6 +24,13 @@
 (require 'ido)
 (ido-mode t)
 
+;; store all backup and autosave files in the tmp dir
+;; no more pesky ~#files# everywhere
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;; ----------------
 ;; auto-complete
 ;; ----------------
