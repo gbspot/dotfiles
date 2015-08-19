@@ -18,6 +18,9 @@
 (setq c-basic-offset 2)
 (setq sh-basic-offset 2)
 
+(require 'ido)
+(ido-mode t)
+
 ; ----------------
 ; auto-complete
 ;-----------------
