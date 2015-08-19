@@ -3,6 +3,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
+; For homebrew packages on OSX
+(add-to-list 'exec-path "/usr/local/bin")
+
 ;-----------
 ; editing
 ;-----------
@@ -68,5 +71,15 @@
 (require 'magit)
 
 
+; ----------
+; spelling
+; ----------
+(setenv "DICTIONARY" "en_GB")
+(setq ispell-program-name "aspell")
+(setq ispell-program-name "aspell")
+(setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_GB"))
+
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 (tool-bar-mode -1)
