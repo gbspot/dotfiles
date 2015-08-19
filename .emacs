@@ -6,6 +6,9 @@
 ;; For homebrew packages on OSX
 (add-to-list 'exec-path "/usr/local/bin")
 
+;; start emacs server
+(server-start)
+
 ;; ----------
 ;; editing
 ;; ----------
