@@ -69,6 +69,7 @@
 ; --------
 ; magit
 ; --------
+(global-set-key (kbd "C-x g") 'magit-status)
 (add-to-list 'load-path "~/.emacs.d/dash.el")
 (add-to-list 'load-path "~/.emacs.d/magit/lisp")
 (require 'magit)
