@@ -20,9 +20,45 @@
 (setq sh-basic-offset 2)
 
 (tool-bar-mode -1)
+(global-font-lock-mode 1)
+(setq inhibit-splash-screen t)
+(setq font-lock-maximum-decoration 3)
+(setq use-file-dialog nil)
+(setq use-dialog-box nil)
+(fset 'yes-or-no-p 'y-or-n-p)
+(show-paren-mode 1)
+(transient-mark-mode t)
+(setq case-fold-search t)
+(blink-cursor-mode 0)
 
 (require 'ido)
+(require 'uniquify)
+
 (ido-mode t)
+(setq ido-enable-flex-matching t)
+(setq ido-create-new-buffer 'always)
+
+;; Tweak uniquify layout
+;; https://curiousprogrammer.wordpress.com/2009/07/13/my-emacs-defaults/
+(setq uniquify-buffer-name-style 'reverse)
+(setq uniquify-separator "|")
+(setq uniquify-after-kill-buffer-p t)
+(setq uniquify-ignore-buffers-re "^\\*")
+
+;; Send copy region to the OS clipboard.
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
+;; Drop all trailing whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Scream after 80chars
+(require 'whitespace)
+(setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-whitespace-mode +1)
+
+(line-number-mode 1)
+(column-number-mode 1)
 
 ;; store all backup and autosave files in the tmp dir
 ;; no more pesky ~#files# everywhere
