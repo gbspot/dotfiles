@@ -37,3 +37,6 @@
 [submodule ".emacs.d/emacs-python-environment"]
 	path = .emacs.d/emacs-python-environment
 	url = https://github.com/tkf/emacs-python-environment.git
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/sorin-ionescu/prezto.git
