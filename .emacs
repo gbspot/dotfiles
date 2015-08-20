@@ -45,10 +45,6 @@
 (setq uniquify-after-kill-buffer-p t)
 (setq uniquify-ignore-buffers-re "^\\*")
 
-;; Send copy region to the OS clipboard.
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
-
 ;; Drop all trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
