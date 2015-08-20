@@ -57,7 +57,7 @@
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode +1)
 
-(line-number-mode 1)
+(global-linum-mode 1)
 (column-number-mode 1)
 
 ;; store all backup and autosave files in the tmp dir
@@ -136,7 +136,7 @@
 ;; sudo via tramp
 ;; -----------------
 ;
-;; Open a file as sudoer with: C-x C-r <file> 
+;; Open a file as sudoer with: C-x C-r <file>
 ;; http://www.emacswiki.org/emacs/TrampMode
 
 (defvar find-file-root-prefix (if (featurep 'xemacs) "/[sudo/root@localhost]" "/sudo:root@localhost:" )
