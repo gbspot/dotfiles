@@ -119,8 +119,6 @@
 
 (setq x-alt-keysm 'meta)
 
-(set-face-attribute 'default nil :height 150)
-
 ;; ------------------------
 ;; member-functions (C++)
 ;; ------------------------
