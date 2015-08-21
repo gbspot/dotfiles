@@ -18,6 +18,8 @@
 (setq tab-width 2)
 (setq c-basic-offset 2)
 (setq sh-basic-offset 2)
+(setq sh-indentation 2)
+(setq zsh-indentation 2)
 
 (tool-bar-mode -1)
 (global-font-lock-mode 1)
@@ -48,10 +50,37 @@
 ;; Drop all trailing whitespace on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Scream after 80chars
+;; Whitespace handling
 (require 'whitespace)
+;; scream after 80chars
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode +1)
+; make carriage returns blue and tabs green
+(custom-set-faces
+ '(my-carriage-return-face ((((class color)) (:background "blue"))) t)
+ '(my-tab-face ((((class color)) (:background "green"))) t)
+ )
+; add custom font locks to all buffers and all files
+(add-hook
+ 'font-lock-mode-hook
+ (function
+  (lambda ()
+    (setq
+     font-lock-keywords
+     (append
+      font-lock-keywords
+      '(
+        ("\r" (0 'my-carriage-return-face t))
+        ("\t" (0 'my-tab-face t))
+        ))))))
+; transform literal tabs into a right-pointing triangle
+(setq
+ whitespace-display-mappings ;http://ergoemacs.org/emacs/whitespace-mode.html
+ '(
+   (tab-mark 9 [9654 9] [92 9])
+   ;others substitutions...
+   ))
+
 
 (global-linum-mode 1)
 (column-number-mode 1)
