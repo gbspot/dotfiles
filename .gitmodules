@@ -40,3 +40,6 @@
 [submodule "prezto"]
 	path = prezto
 	url = git@github.com:gbspot/prezto
+[submodule ".emacs.d/jade-mode"]
+	path = .emacs.d/jade-mode
+	url = https://github.com/brianc/jade-mode.git

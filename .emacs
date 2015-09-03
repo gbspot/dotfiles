@@ -213,6 +213,15 @@
 (setq js2-basic-offset 2)
 (setq js2-use-font-lock-faces t)
 
+;; -----------
+;; jade-mode
+;; -----------
+(add-to-list 'load-path "~/.emacs.d/jade-mode")
+(require 'sws-mode)
+(require 'jade-mode)
+(add-to-list 'auto-mode-alist '("\\.styl\\'" . sws-mode))
+
+
 ;; --------------------------
 ;; jedi (Python completion)
 ;; --------------------------
