@@ -221,6 +221,12 @@
 (require 'jade-mode)
 (add-to-list 'auto-mode-alist '("\\.styl\\'" . sws-mode))
 
+;; -----------
+;; jam-mode
+;; -----------
+(require 'jam-mode)
+(add-to-list 'auto-mode-alist '("\\.jam$" . jam-mode))
+(add-to-list 'auto-mode-alist '("Jam\\.*" . jam-mode))
 
 ;; --------------------------
 ;; jedi (Python completion)
