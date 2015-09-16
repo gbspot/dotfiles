@@ -135,18 +135,23 @@
 (color-theme-initialize)
 (color-theme-midnight)
 
+
 ;; --------
 ;; magit
 ;; --------
-(global-set-key (kbd "C-x g") 'magit-status)
-(add-to-list 'load-path "~/.emacs.d/dash.el")
-(add-to-list 'load-path "~/.emacs.d/magit/lisp")
-(require 'magit)
-(with-eval-after-load 'info
-  (info-initialize)
-  (add-to-list 'Info-directory-list
-               "~/.emacs.d/magit/Documentation/"))
+;; Require emacs >=24.4
+(if (version< emacs-version "24.4")
+    (progn (message "emacs is too old for magit"))
 
+  (global-set-key (kbd "C-x g") 'magit-status)
+  (add-to-list 'load-path "~/.emacs.d/dash.el")
+  (add-to-list 'load-path "~/.emacs.d/magit/lisp")
+  (require 'magit)
+  (with-eval-after-load 'info
+    (info-initialize)
+    (add-to-list 'Info-directory-list
+                 "~/.emacs.d/magit/Documentation/"))
+  )
 
 ;; ----------
 ;; spelling
