@@ -140,8 +140,16 @@
 ;; magit
 ;; --------
 ;; Require emacs >=24.4
-(if (version< emacs-version "24.4")
-    (progn (message "emacs is too old for magit"))
+;; Require git >= 1.9.4
+(setq git-version
+  (substring
+    (shell-command-to-string "git --version | awk '{print $3}' | sed 's/\.[0-9]$//'")
+    0 -1))
+
+(if (version< git-version "1.9")
+    (progn (message "git is too old for magit support, need > 1.9"))
+  (if (version< emacs-version "24.4")
+      (progn (message "emacs is too old for magit, need >= 24.4"))
 
   (global-set-key (kbd "C-x g") 'magit-status)
   (add-to-list 'load-path "~/.emacs.d/dash.el")
@@ -151,7 +159,7 @@
     (info-initialize)
     (add-to-list 'Info-directory-list
                  "~/.emacs.d/magit/Documentation/"))
-  )
+  ))
 
 ;; ----------
 ;; spelling
