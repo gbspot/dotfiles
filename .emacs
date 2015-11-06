@@ -248,19 +248,19 @@
 ;; Run M-x jedi:install-server RET to configure on first use
 ;; (requires 'pip install virtualenv')
 ;;
-(add-to-list 'load-path "~/.emacs.d/emacs-epc")
-(add-to-list 'load-path "~/.emacs.d/emacs-deferred")
-(add-to-list 'load-path "~/.emacs.d/emacs-ctable")
-(add-to-list 'load-path "~/.emacs.d/emacs-python-environment")
-(require 'python-environment)
+;; (add-to-list 'load-path "~/.emacs.d/emacs-epc")
+;; (add-to-list 'load-path "~/.emacs.d/emacs-deferred")
+;; (add-to-list 'load-path "~/.emacs.d/emacs-ctable")
+;; (add-to-list 'load-path "~/.emacs.d/emacs-python-environment")
+;; (require 'python-environment)
 
-(require 'epc)
-(setq jedi:server-command '("~/.emacs.d/emacs-jedi/jediepcserver.py"))
-(add-to-list 'load-path "~/.emacs.d/emacs-jedi")
-(require 'jedi)
-(autoload 'jedi:setup "jedi" nil t)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; (require 'epc)
+;; (setq jedi:server-command '("~/.emacs.d/emacs-jedi/jediepcserver.py"))
+;; (add-to-list 'load-path "~/.emacs.d/emacs-jedi")
+;; (require 'jedi)
+;; (autoload 'jedi:setup "jedi" nil t)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)
 
 ;; for local site configs
 (load "~/.emacs.local")
