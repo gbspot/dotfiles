@@ -110,11 +110,12 @@
 (ac-set-trigger-key "TAB")
 (ac-set-trigger-key "<tab>")
 
-(add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
-(require 'auto-complete-clang)
+;; This seems to interfere with auto-complete
+;; (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
+;; (require 'auto-complete-clang)
 
-(setq ac-auto-start nil)
-(setq ac-quick-help-delay 0.5)
+;; (setq ac-auto-start nil)
+;; (setq ac-quick-help-delay 0.5)
 
 (setq x-alt-keysm 'meta)
 
