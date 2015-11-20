@@ -56,7 +56,7 @@
 (setq uniquify-ignore-buffers-re "^\\*")
 
 ;; Drop all trailing whitespace on save
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Whitespace handling
 (require 'whitespace)
