@@ -9,9 +9,18 @@
 ;; start emacs server
 (server-start)
 
+;; Stop accidental minimization, since it can't be
+;; reversed from the keyboard  (from EmacsWiki)
+;; "Protect From Judd Mode"
+(when window-system
+    (global-unset-key [?\C-x ?\C-z])) ; iconify-or-deiconify-frame (C-x C-z)
+
 ;; ----------
 ;; editing
 ;; ----------
+
+;; Default to text-mode (not fundamental mode)
+(setq default-major-mode 'text-mode)
 
 ;; No tabs, spaces only
 (setq-default indent-tabs-mode nil)
