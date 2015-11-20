@@ -132,9 +132,11 @@
 ;; Not bundled on emacs for mac
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (require 'color-theme)
+(add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized")
+(require 'color-theme-solarized)
 (color-theme-initialize)
-(color-theme-midnight)
-
+;(color-theme-midnight)
+(color-theme-solarized-dark)
 
 ;; --------
 ;; magit
