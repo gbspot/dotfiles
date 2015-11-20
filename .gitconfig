@@ -53,6 +53,9 @@
   # Show changes that have been staged
   diffc = diff --cached
 
+# Translate all git: to https:
+[url "https://github.com/"]
+    insteadOf = git://github.com/
 
 # Include site defaults to override these
 [include]
