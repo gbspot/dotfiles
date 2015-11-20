@@ -154,7 +154,7 @@
 ;; Require git >= 1.9.4
 (setq git-version
   (substring
-    (shell-command-to-string "git --version | awk '{print $3}' | sed 's/\.[0-9]$//'")
+    (shell-command-to-string "git --version | awk '{print $3}' | sed 's/\.[0-9]$//' | sed 's/\.rc.*$//'")
     0 -1))
 
 (if (version< git-version "1.9")
