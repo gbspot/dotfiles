@@ -252,6 +252,14 @@
 (add-to-list 'auto-mode-alist '("\\.jam$" . jam-mode))
 (add-to-list 'auto-mode-alist '("Jam\\.*" . jam-mode))
 
+;; ---------------
+;; dockerfile-mode
+;; ---------------
+
+(add-to-list 'load-path "~/.emacs.d/dockerfile-mode/")
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+
 ;; --------------------------
 ;; jedi (Python completion)
 ;; --------------------------

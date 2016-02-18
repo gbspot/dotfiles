@@ -46,3 +46,6 @@
 [submodule ".emacs.d/emacs-color-theme-solarized"]
 	path = .emacs.d/emacs-color-theme-solarized
 	url = https://github.com/sellout/emacs-color-theme-solarized.git
+[submodule ".emacs.d/dockerfile-mode"]
+	path = .emacs.d/dockerfile-mode
+	url = https://github.com/spotify/dockerfile-mode.git
