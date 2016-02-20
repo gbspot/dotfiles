@@ -49,3 +49,6 @@
 [submodule ".emacs.d/dockerfile-mode"]
 	path = .emacs.d/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode.git
+[submodule "solarized-xresources"]
+	path = solarized-xresources
+	url = https://github.com/solarized/xresources.git
